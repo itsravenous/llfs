@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <title>Leeds Lunchtime Footy Soundboard</title>
+    <style>
+      body { padding: 1rem; background: forestgreen; color: white; text-align: center; font-family: monospace; }
+      button { width: 12em; height: 12em; padding: 0 1rem; text-align: center; line-height: 7rem; background: darkgreen; color: white; font-family: monospace; font-size: 1.25rem; }
+      .buttons button { display: inline-block; margin: 1rem; }
+    </style>
+  </head>
+  <body>
+    <h1>#leeds-lunchtime-footy soundboard</h1>
+    <div class="buttons">
+      <button>
+        Edge of D!
+        <audio src="z_edge_of_d.mp3">
+      </button>
+      <button>
+        Zishan squawk
+        <audio src="z_squawk.mp3">
+      </button>
+      <button>
+        Line! Line! Line!
+        <audio src="z_line_line_line.mp3">
+      </button>
+      <button>
+        James posh bark
+        <audio src="j_bark.mp3">
+      </button>
+      <button>
+        James interview
+        <audio src="j_interview.mp3">
+      </button>
+      <button>
+        Greedy bastard!
+        <audio src="j_greedy.mp3">
+      </button>
+      <button>
+        So many men!
+        <audio src="j_so_many_men.mp3">
+      </button>
+    </div>
+
+    <script>
+      const stopAllAudio = () => Array.from(document.getElementsByTagName('audio')).forEach(audio => audio.pause());
+      Array.from(document.querySelectorAll('button')).forEach(button => button.addEventListener('click', () => {
+        stopAllAudio()
+        setTimeout(() => button.querySelector('audio').play(), 10);
+      }));
+    </script>
+  </body>
+</html>
